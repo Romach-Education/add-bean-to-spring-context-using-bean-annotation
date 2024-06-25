@@ -7,6 +7,6 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
         Book book = context.getBean("book", Book.class);
-        System.out.println("The parrot's name is " + book.getTitle());
+        System.out.println("The book's title is " + book.getTitle());
     }
 }
