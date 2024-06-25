@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationConfiguration {
     @Bean
     Book book() {
-        return new Book(" One Hundred Years of Solitude");
+        return new Book("One Hundred Years of Solitude");
     }
 }
