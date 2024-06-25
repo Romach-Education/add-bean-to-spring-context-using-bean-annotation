@@ -42,13 +42,13 @@ public class ApplicationConfiguration {
 
 ## Add bean to configuration class
 
-```java
+```diff
 @Configuration
 public class ApplicationConfiguration {
-    @Bean
-    Book book() {
-        return new Book(" One Hundred Years of Solitude");
-    }
++   @Bean
++   Book book() {
++       return new Book(" One Hundred Years of Solitude");
++   }
 }
 ```
 
