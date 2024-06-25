@@ -1,4 +1,4 @@
-# Add Spring context to Maven project
+# Add bean to Spring context using @bean annotation
 
 > This project is based on chapter **2.2.1. Using the @Bean annotation to add beans into the Spring context** from book **Spring Starts here (2021)** by Laurentiu Spilca.
 
