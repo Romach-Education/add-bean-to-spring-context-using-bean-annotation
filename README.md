@@ -129,14 +129,14 @@ public class ApplicationTests {
 public class BookTests {
 
     @Autowired
-    private ApplicationContext context;
+    private Book actualBook;
 
     @Test
     @DisplayName("Fetch the book bean from the context")
     public void fetchBookBean() {
-        Book book = context.getBean("book", Book.class);
+        Book expectedBook = new Book("One Hundred Years of Solitude");
 
-        assertEquals(new Book("One Hundred Years of Solitude"), book);
+        assertEquals(expectedBook, actualBook);
     }
 }
 ```

@@ -3,7 +3,6 @@ package org.example;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,13 +14,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BookTests {
 
     @Autowired
-    private ApplicationContext context;
+    private Book actualBook;
 
     @Test
     @DisplayName("Fetch the book bean from the context")
     public void fetchBookBean() {
-        Book book = context.getBean("book", Book.class);
+        Book expectedBook = new Book("One Hundred Years of Solitude");
 
-        assertEquals(new Book("One Hundred Years of Solitude"), book);
+        assertEquals(expectedBook, actualBook);
     }
 }
